@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Dancing+Script:wght@700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #BBD38B;
+  --color-secondary: #777D71;
+  --color-bg: #F7F6E7;
+  --color-card: #DFDDC5;
+  --color-text: #777D71;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply font-semibold py-3 px-8 rounded-full transition-all duration-300 transform shadow-lg hover:shadow-xl;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+  }
+
+  .btn-primary:hover {
+    background: var(--color-secondary);
+    color: var(--color-bg);
+    border-color: var(--color-primary);
+  }
+
+  .card {
+    @apply rounded-2xl shadow-xl border;
+    background: var(--color-card);
+    border-color: var(--color-secondary);
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #BBD38B 0%, #DFDDC5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+@keyframes firework-burst {
+  0% { transform: scale(0.2) rotate(0deg); opacity: 0; }
+  60% { opacity: 1; }
+  100% { transform: scale(1) rotate(360deg); opacity: 0; }
+}
