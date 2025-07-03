@@ -257,8 +257,8 @@ function App() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: "100%", opacity: 0 }}
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className={`flex-1 flex flex-col justify-center items-center p-6 md:p-12 shadow-xl ${
-                  isMobile ? "rounded-2xl" : ""
+                className={`flex-1 flex flex-col  items-center p-6 md:p-12 shadow-xl ${
+                  isMobile ? "rounded-2xl justify-start" : "justify-center"
                 }`}
                 style={{
                   background: "rgba(223,221,197,0.95)",
